@@ -5,8 +5,9 @@ function Project(props) {
     return (
         <div className={style.project}>
             <div className={style.background}>
-                <div>
-                <a href="#">push</a></div>
+                {/*<div>*/}
+                <a href="#">push</a>
+                {/*</div>*/}
             </div>
 
             <h3>{props.title}</h3>

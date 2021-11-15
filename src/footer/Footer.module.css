@@ -17,7 +17,7 @@
 .networks {
     background-color: #c9b1e2;
     border: 1px solid;
-    width: 300px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
 }

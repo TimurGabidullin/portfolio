@@ -18,7 +18,7 @@
     background-color: red;
     border: 1px solid;
     height: 100px;
-    width: 200px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
