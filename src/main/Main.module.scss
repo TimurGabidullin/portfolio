@@ -1,0 +1,48 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.mainBlock {
+  .mainContainer {
+
+    .text {
+      width: 400px;
+      @include text($titleFontFamily, 27px, 1.2);
+      font-weight: 400;
+      background-color: $bgColor;
+
+
+      .spanText {
+        @include text($textFontFamily, 16px, 1.8);
+        font-weight: 400;
+      }
+
+      .prof {
+        @include text($titleFontFamily, 27px, 1.8);
+        margin: 0;
+      }
+    }
+
+    .photo {
+      width: 300px;
+      height: 400px;
+      background-color: #e3eae3;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @media screen and (max-width: 877px) {
+      justify-content: center;
+    }
+
+  }
+
+  min-height: 100vh;
+  background-color: $bgColor;
+
+
+}
+
+
+
+
