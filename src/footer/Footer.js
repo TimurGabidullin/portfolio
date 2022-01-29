@@ -15,10 +15,11 @@ function Footer() {
                     <div className={style.icon}></div>
                     <div className={style.icon}></div>
                 </div>
-                <span className={style.copy}>&copy; 2021 Все права защищены</span>
+                <span className={style.copy}>© 2022 beingeorge, All Rights Reserved.</span>
             </div>
         </div>
     );
 }
+
 
 export default Footer;
