@@ -3,7 +3,8 @@
 
 
 .contactsBlock {
-    height: 100vh;
+    //height: 100vh;
+    min-height:494px ;
     background-color: $bgSecondColor;
 
     .contactsContainer {
@@ -13,15 +14,20 @@
 
         .contacts {
             background-color: $bgSecondColor;
-            border: 1px solid;
-            height: 100px;
-            width: 250px;
+            //height: 100px;
+            min-height: 300px;
+            //width: 250px;
+            width: 600px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            //justify-content: space-between;
+            justify-content: flex-start;
+
 
             input, textarea {
                 background-color: $bgColor;
+                width: 540px;
+                margin: 20px;
             }
 
         }

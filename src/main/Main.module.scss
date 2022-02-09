@@ -2,6 +2,11 @@
 @import "src/common/styles/sass/mixins";
 
 .mainBlock {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   .mainContainer {
 
     .text {
@@ -27,6 +32,7 @@
       height: 400px;
       background-color: #e3eae3;
     }
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

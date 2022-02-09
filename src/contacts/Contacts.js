@@ -10,11 +10,14 @@ function Contacts() {
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                 <Title text={'Contacts'}/>
                 <form action="#" className={style.contacts}>
-                    <input/>
-                    <input/>
-                    <textarea></textarea>
+                    <input placeholder={'Name'}/>
+                    <input placeholder={'E-mail'}/>
+                    <textarea placeholder={'Your message'}></textarea>
+
+                    <button>SEND MESSAGE</button>
+
                 </form>
-                <button>SEND MESSAGE</button>
+                {/*<button>SEND MESSAGE</button>*/}
             </div>
         </div>
     );
