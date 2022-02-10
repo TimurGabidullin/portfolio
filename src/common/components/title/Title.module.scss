@@ -1,7 +1,7 @@
 @import 'src/common/styles/sass/variables';
 
 .title {
-  margin: 0 0 30px;
+  margin: 100px 0 30px;
   position: relative;
 
     .text{
@@ -24,6 +24,7 @@
         width: 55px;
         height: 1px;
         transform: translate(-50%, 50%);
+
     }
 
 }
