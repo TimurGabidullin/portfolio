@@ -3,7 +3,9 @@ import style from './Skills.module.scss';
 import styleContainer from '../common/styles/Container.module.css'
 import Skill from "./skill/Skill";
 import Title from "../common/components/title/Title";
-
+import { faReact } from '@fortawesome/free-brands-svg-icons'
+import { faCss3Alt} from '@fortawesome/free-brands-svg-icons'
+import { faJs} from '@fortawesome/free-brands-svg-icons'
 
 function Skills() {
     return (
@@ -11,9 +13,9 @@ function Skills() {
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title text={'Scills'}/>
                 <div className={style.skills}>
-                    <Skill title={'Js'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq qqqqq qqqqq'}/>
-                    <Skill title={'Css'} description={'qqqqqq qqqqqqq qqqqqq q'}/>
-                    <Skill title={'React'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq q'}/>
+                    <Skill title={'Js'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq qqqqq qqqqq'} icon={faJs} />
+                    <Skill title={'Css'} description={'qqqqqq qqqqqqq qqqqqq q'} icon={faCss3Alt}/>
+                    <Skill title={'React'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq q'} icon={faReact}/>
                 </div>
             </div>
         </div>
