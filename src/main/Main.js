@@ -1,11 +1,11 @@
 import React from "react";
 import style from './Main.module.scss';
-import styleContainer from '../common/styles/Container.module.css'
 
 function Main() {
     return (
         <div className={style.mainBlock}>
-            <div className={`${styleContainer.container} ${style.mainContainer}`}>
+            {/*<div className={`${styleContainer.container} ${style.mainContainer}`}>*/}
+            <div className={`${style.mainContainer}`}>
                 <div className={style.text}>
                     <span className={style.spanText}>Hi There</span>
                     <h1>I am Timur Gabidullin</h1>

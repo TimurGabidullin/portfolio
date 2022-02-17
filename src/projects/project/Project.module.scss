@@ -16,9 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include bgSettings;
     position: relative;
 
     &::before {
@@ -35,7 +33,7 @@
     .viewBtn {
       text-decoration: none;
       background-color: $primaryColor;
-      color:$textColor;
+      color: $textColor;
       padding: 5px;
       align-items: center;
       position: relative;
@@ -51,12 +49,12 @@
       letter-spacing: 1px;
       margin: 0 0 5px;
       font-weight: 700;
-      @include text($titleFontFamily,16px,1.2);
+      @include text($titleFontFamily, 16px, 1.2);
     }
 
     .description {
       font-weight: 400;
-      @include text($textFontFamily,12px,1.8);
+      @include text($textFontFamily, 12px, 1.8);
 
     }
   }

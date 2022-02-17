@@ -7,21 +7,17 @@
   background-color: $bgSecondColor;
 
   .contactsContainer {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+    @include container;
+    @include flex(column, space-between, center, nowrap);
 
     .contacts {
-
 
       margin: 30px 0 0;
       background-color: $bgSecondColor;
       min-height: 300px;
       width: 600px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+
+      @include flex(column, flex-start, center, nowrap);
       @media screen and (max-width: 992px) {
         max-width: 330px;
       }
@@ -61,7 +57,6 @@
 
 
     button {
-
       width: 170px;
       background-color: $primaryColor;
       color: $textColor;
