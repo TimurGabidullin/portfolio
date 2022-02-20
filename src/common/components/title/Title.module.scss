@@ -4,7 +4,7 @@
   margin: 100px 0 30px;
   position: relative;
 
-    .text{
+  .text {
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
@@ -15,17 +15,16 @@
     letter-spacing: 5px;
   }
 
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        background: $primaryColor;
-        width: 55px;
-        height: 1px;
-        transform: translate(-50%, 50%);
-
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    background: $primaryColor;
+    width: 55px;
+    height: 1px;
+    transform: translate(-50%, 50%);
+  }
 
 }
 

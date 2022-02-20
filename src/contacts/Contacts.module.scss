@@ -1,5 +1,6 @@
 @import 'src/common/styles/sass/mixins';
 @import 'src/common/styles/sass/variables';
+@import 'src/common/components/ button/Button.module';
 
 
 .contactsBlock {
@@ -57,14 +58,18 @@
 
 
     button {
-      width: 170px;
-      background-color: $primaryColor;
-      color: $textColor;
-      padding: 5px;
-      @include text($textFontFamily, 14px, 1.2);
-      font-weight: 400;
-      letter-spacing: 1px;
+      //width: 170px;
+      //background-color: $primaryColor;
+      //color: $textColor;
+      //padding: 5px;
+      //@include text($textFontFamily, 14px, 1.2);
+      //font-weight: 400;
+      //letter-spacing: 1px;
+      //margin-bottom: 100px;
+      @extend .btn;
+      border: none;
       margin-bottom: 100px;
+      background-color: $bgSecondColor;
     }
   }
 }
