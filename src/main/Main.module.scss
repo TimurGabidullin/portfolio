@@ -1,12 +1,13 @@
 @import "src/common/styles/sass/variables";
 @import "src/common/styles/sass/mixins";
 
-.mainBlock {
 
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
-  @include flex(column,center,center,nowrap);
+
+
+//Медиазапросы нужно добавить при сжатии окна -чтоб по центру было все
+
+.mainBlock {
+  @include flex(column, center, center, nowrap);
 
   min-height: 100vh;
   background-color: $bgColor;
@@ -15,22 +16,81 @@
     @include container();
     height: 100%;
 
-    .text {
-      width: 400px;
-      @include text($titleFontFamily, 27px, 1.2);
+    .greeting {
+      width: 600px;
+      @include text($titleFontFamily, 40px, 1.2);
+      @include flex(column, flex-start, flex-start, nowrap);
+
       font-weight: 400;
       background-color: $bgColor;
 
 
-      .spanText {
+      span {
         @include text($textFontFamily, 16px, 1.8);
-        font-weight: 400;
+
+
+        //&:nth-child(2) {
+        //  @include text($textFontFamily, 40px, 1.2);
+        //  font-weight: 700;
+        //  letter-spacing: 5px;
+        //  margin: 10px 0;
+        //
+        //}
+        //
+        //span {
+        //  @include text($textFontFamily, 40px, 1.2);
+        //  font-weight: 700;
+        //  letter-spacing: 5px;
+        //  position: relative;
+        //  display: inline-block;
+        //  //z-index: 0;
+        //  &:before{
+        //    content: '';
+        //    position: absolute;
+        //    bottom: -30px;
+        //    background: $primaryColor;
+        //    width: 100%;
+        //    height: 20px;
+        //    //z-index: -1;
+        //
+        //  }
+        //
+        //
+        //}
+
       }
 
-      .prof {
-        @include text($titleFontFamily, 27px, 1.8);
-        margin: 0;
+      h1{
+        @include text($textFontFamily, 40px, 1.2);
+        font-weight: 700;
+        letter-spacing: 5px;
+        margin-top: 30px;
+        span {
+          @include text($textFontFamily, 40px, 1.2);
+          font-weight: 700;
+          letter-spacing: 5px;
+          position: relative;
+          display: inline-block;
+          z-index: 0;
+          &:before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            background: $primaryColor;
+            width: 100%;
+            height: 20px;
+            z-index: -1;
+          }
+
+        }
       }
+      //h2{
+      //  @include text($textFontFamily, 16px, 1.8);
+      //  font-weight: 400;
+      //  margin-top: 30px;
+      //}
+
+
     }
 
     .photo {
@@ -38,11 +98,7 @@
       height: 400px;
       background-color: #e3eae3;
     }
-    //display: flex;
-    //justify-content: space-between;
-    //flex-wrap: wrap;
-    //align-items: flex-start;
-    //align-items: center;
+
     @include flex(row, space-between, center, wrap);
     @media screen and (max-width: 877px) {
       justify-content: center;

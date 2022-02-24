@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Projects.module.scss';
-import styleContainer from '../common/styles/Container.module.css'
 import Project from './project/Project';
 import Title from '../common/components/title/Title';
 import social from '../assets/image/social-network.jpg';
@@ -20,7 +19,7 @@ function Projects() {
 
     return (
         <div className={style.projectsBlock}>
-            <div className={`${styleContainer.container} ${style.projectsContainer}`}>
+            <div className={`${style.projectsContainer}`}>
                 <Title text={'Projects'}/>
                 <div className={style.projects}>
                     <Project style={socialImg} title={'Social Network'}

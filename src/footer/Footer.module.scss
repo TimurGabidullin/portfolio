@@ -7,15 +7,20 @@
   background-color: $bgColor;
 
   .footerContainer {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+
+    @include container;
+    @include flex(column, space-between, center, nowrap);
+
+
+    //align-items: center;
+    //flex-direction: column;
+    //justify-content: space-between;
 
     .title {
       //background-color: $bgSecondColor;
-      padding:  0;
+      padding: 0;
       margin: 40px 0 20px;
-      @include text($titleFontFamily,22px,1.2);
+      @include text($titleFontFamily, 22px, 1.2);
       letter-spacing: 3px;
 
     }
@@ -38,8 +43,8 @@
     .copy {
       margin: 0 0 20px;
       background-color: $bgColor;
-      @include text($textFontFamily,14px,1.8);
-      color:#ffffff80;
+      @include text($textFontFamily, 14px, 1.8);
+      color: #ffffff80;
     }
   }
 
