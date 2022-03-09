@@ -7,6 +7,7 @@
   padding: 20px;
   text-align: center;
 
+
   @include flex(column, center, center, nowrap);
 
   .icon {
@@ -14,6 +15,12 @@
     width: 60px;
     background-color: $bgColor;
     margin: 0px auto 30px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    .ic{
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
   }
 
   h3 {
