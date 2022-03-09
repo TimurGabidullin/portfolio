@@ -60,11 +60,12 @@
 
       }
 
-      h1{
+      h1 {
         @include text($textFontFamily, 40px, 1.2);
         font-weight: 700;
         letter-spacing: 5px;
         margin-top: 30px;
+
         span {
           @include text($textFontFamily, 40px, 1.2);
           font-weight: 700;
@@ -72,7 +73,8 @@
           position: relative;
           display: inline-block;
           z-index: 0;
-          &:before{
+
+          &:before {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -84,6 +86,8 @@
 
         }
       }
+
+
       //h2{
       //  @include text($textFontFamily, 16px, 1.8);
       //  font-weight: 400;
@@ -94,9 +98,36 @@
     }
 
     .photo {
-      width: 300px;
-      height: 400px;
-      background-color: #e3eae3;
+      position: relative;
+      z-index: 1;
+      @media screen and (max-width: 1143px) {
+        margin-top: 30px;
+      }
+
+      .image {
+        width: 300px;
+        height: 400px;
+        background-color: #e3eae3;
+        background-position: 80% 0;
+        @media screen and (max-width: 710px) {
+          width: 240px;
+          height: 340px;
+          transition: .5s;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 105%;
+          height: 110%;
+          border: 5px solid #4e93e6;
+          left: 15px;
+          top: -15px;
+          z-index: -1;
+        }
+      }
+
+
     }
 
     @include flex(row, space-between, center, wrap);

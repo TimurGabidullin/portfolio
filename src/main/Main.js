@@ -10,7 +10,9 @@ function Main() {
                     <h1>I am Timur <span>Gabidullin</span></h1>
                     <span>Frontend Developer</span>
                 </div>
-                <div className={style.photo}></div>
+                <div className={style.photo}>
+                    <div className={style.image}></div>
+                </div>
             </div>
         </div>
     );
