@@ -1,14 +1,16 @@
 import React from "react";
 import style from './Title.module.scss';
+import Fade from "react-reveal/Fade";
 
 
 
 function Title(props) {
     return (
+        <Fade bottom>
         <div className={style.title}>
             <h2 className={style.text}>{props.text}</h2>
         </div>
-
+        </Fade>
     );
 }
 

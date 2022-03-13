@@ -8,40 +8,38 @@
 
 .mainBlock {
   @include flex(column, center, center, nowrap);
-
   min-height: 100vh;
   background-color: $bgColor;
+  position: relative;
+
+  .particles {
+    opacity: 0.8;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
 
   .mainContainer {
     @include container();
     height: 100%;
-    position: relative;
-
-    .particles{
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      //height: 100%;
-      //width: 100%;
-      z-index: 0;
-      opacity: 0.8;
-    }
-
 
 
     .greeting {
       width: 600px;
       @include text($titleFontFamily, 40px, 1.2);
       @include flex(column, flex-start, flex-start, nowrap);
-
+      z-index: 1;
       font-weight: 400;
       background-color: $bgColor;
 
 
       span {
         @include text($textFontFamily, 16px, 1.8);
+        z-index: 0;
 
 
         //&:nth-child(2) {
@@ -114,7 +112,7 @@
 
     .photo {
       position: relative;
-      z-index: 1;
+      z-index: 4;
       margin-bottom: 40px;
 
       @media screen and (max-width: 1143px) {
