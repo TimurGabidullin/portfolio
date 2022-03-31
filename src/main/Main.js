@@ -1,12 +1,14 @@
 import React from "react";
 import style from './Main.module.scss';
 import Particles from "react-tsparticles";
-
+import Fade from "react-reveal/Fade";
+import ReactTypingEffect from 'react-typing-effect';
+import Tilt from 'react-tilt'
 
 function Main() {
 
     return (
-        <div className={style.mainBlock}>
+        <div id={'main'} className={style.mainBlock}>
 
             {/*Нужно сюда запихнуть Particles*/}
 
@@ -17,17 +19,6 @@ function Main() {
                     fullScreen: {enable: false},
                     fpsLimit: 120,
                     interactivity: {
-                        events: {
-                            onClick: {
-                                enable: true,
-                                mode: "push",
-                            },
-                            onHover: {
-                                enable: true,
-                                mode: "repulse",
-                            },
-                            resize: true,
-                        },
                         modes: {
                             bubble: {
                                 distance: 400,
@@ -63,7 +54,7 @@ function Main() {
                             enable: true,
                             outMode: "bounce",
                             random: false,
-                            speed: 6,
+                            speed: 2,
                             straight: false,
                         },
                         number: {
@@ -87,16 +78,29 @@ function Main() {
                     detectRetina: true,
                 }}
             />
-
             <div className={`${style.mainContainer}`}>
+                <Fade bottom>
                     <div className={style.greeting}>
                         <span>Hi There</span>
                         <h1>I am Timur <span>Gabidullin</span></h1>
-                        <span>Frontend Developer</span>
+                        {/*<span>Frontend Developer</span>*/}
+                        <ReactTypingEffect className={style.typingText}
+                                           text={["Frontend Developer"]}
+                        />
                     </div>
-                    <div className={style.photo}>
-                        <div className={style.image}></div>
-                    </div>
+                </Fade>
+                <Fade right>
+
+                        <div className={style.photo}>
+                            <Tilt className="Tilt" options={{max: 25}} >
+                            <div className={style.image}></div>
+                            </Tilt>
+                        </div>
+
+
+
+                </Fade>
+
             </div>
         </div>
     );

@@ -7,7 +7,6 @@ function Project(props) {
         <div className={style.project}>
             <div className={style.background} style={props.style}>
                 <Button text={'VIEW'}/>
-                {/*<a className={style.viewBtn} href="#">Смотреть</a>*/}
             </div>
             <div className={style.projectInfo}>
                 <h3 className={style.projectTitle}>{props.title}</h3>

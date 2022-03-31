@@ -1,9 +1,6 @@
 @import "src/common/styles/sass/variables";
 @import "src/common/styles/sass/mixins";
 
-
-
-
 //Медиазапросы нужно добавить при сжатии окна -чтоб по центру было все
 
 .mainBlock {
@@ -13,7 +10,7 @@
   position: relative;
 
   .particles {
-    opacity: 0.8;
+    opacity: 0.3;
     z-index: 2;
     position: absolute;
     left: 0;
@@ -27,7 +24,6 @@
     @include container();
     height: 100%;
 
-
     .greeting {
       width: 600px;
       @include text($titleFontFamily, 40px, 1.2);
@@ -35,7 +31,6 @@
       z-index: 1;
       font-weight: 400;
       background-color: $bgColor;
-
 
       span {
         @include text($textFontFamily, 16px, 1.8);
@@ -99,7 +94,13 @@
 
         }
       }
-
+      .typingText {
+        @include text($textFontFamily, 28px, 1.8);
+        font-weight: 400;
+        span {
+          @include text($textFontFamily, 28px, 1.8);
+        }
+      }
 
       //h2{
       //  @include text($textFontFamily, 16px, 1.8);
@@ -120,6 +121,8 @@
       }
 
       .image {
+       background-image: url('../assets/image/photo_2022-03-29_17-26-21.jpg');
+        background-size: cover;
         width: 300px;
         height: 400px;
         background-color: #e3eae3;

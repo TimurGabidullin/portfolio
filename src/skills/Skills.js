@@ -11,11 +11,11 @@ import {faFileCode} from "@fortawesome/free-solid-svg-icons/faFileCode";
 
 function Skills() {
     return (
-        <div className={style.skillsBlock}>
+        <div id={'skills'} className={style.skillsBlock}>
             <div className={`${style.skillsContainer}`}>
                 <Title text={'Scills'}/>
                 <div className={style.skills}>
-                    <Skill title={'Js'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq qqqqq qqqqq'} icon={faJs} />
+                    <Skill title={'Js'} description={'Ирочка'} icon={faJs} />
                     <Skill title={'html & Css'} description={'qqqqqq qqqqqqq qqqqqq q'} icon={faCss3Alt}/>
                     <Skill title={'React'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq q'} icon={faReact}/>
                     <Skill title={'html & Css'} description={'qqqqqq qqqqqqq qqqqqq qqqqqqqq qqqqqq q'} icon={faFileCode}/>

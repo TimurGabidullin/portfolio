@@ -3,7 +3,12 @@
 
 
 .header {
-    height: 80px;
-    background-color: $bgSecondColor;
-    @include flex(row, flex-end, center, nowrap);
+  height: 80px;
+  background-color: $bgSecondColor;
+  width: 100%;
+  @include flex(row, flex-end, center, nowrap);
+  position: sticky;
+  float: top;
+  top: 0;
+  z-index: 100;
 }
