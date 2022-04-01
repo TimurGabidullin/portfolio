@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import style from './BurgerNav.module.scss';
 import {Link} from 'react-scroll'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons/faBars";
+
 
 function BurgerNav() {
 
@@ -9,9 +12,8 @@ function BurgerNav() {
 
     return (
         <div className={style.burgerNav}>
-            {/*<div className={style.burgerNavItems}>*/}
-            {/*<div className={style.burgerNavItems + ' ' + style.burgerNavItemsClosed}>*/}
-            <div className={isOpenMenu?style.burgerNavItems:style.burgerNavItems + ' ' + style.burgerNavItemsClosed}>
+            <div
+                className={isOpenMenu ? style.burgerNavItems : style.burgerNavItems + ' ' + style.burgerNavItemsClosed}>
                 <Link activeClass={style.active}
                       to="main"
                       spy={true}
@@ -48,7 +50,13 @@ function BurgerNav() {
             <div className={style.burgerBtn} onClick={() => {
                 setIsOpenMenu(!isOpenMenu);
                 console.log(isOpenMenu)
-            }}></div>
+            }}>
+                <FontAwesomeIcon icon={faBars}
+                                 size='1x'
+                                 color={'#fff'}
+                                 transform="down-2.5 right-8"
+                />
+            </div>
         </div>
     );
 }

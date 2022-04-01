@@ -9,18 +9,19 @@
   //justify-content: space-between;
   //position: relative;
 
+
   .burgerNavItems {
-    @include flex(column, space-between, center, nowrap);
+    @include flex(column, space-around, center, nowrap);
     background-color: $bgSecondColor;
     height: 200px;
-
+    opacity: 0.95;
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 0;
     left: 0;
-    display: none;
-    //transform: translate(0,0px);
-    //transition: 0.5s;
+    transform: translate(0,0px);
+    transition: 0.5s;
+    //display: flex;
 
 
 
@@ -40,12 +41,12 @@
   }
 
   .burgerNavItemsClosed {
-    @media screen and (min-width: 400px) {
-      //display: flex;
-      //transform: translate(0,1000px);
-      //transition: 0.5s;
-     //background-color: red;
-    }
+    //@media screen and (max-width: 400px) {
+    //
+    //}
+    transform: translate(0,-200px);
+    transition: 0.5s;
+    height: 0;
   }
 
   .burgerBtn {
